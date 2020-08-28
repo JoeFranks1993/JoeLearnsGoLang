@@ -1,0 +1,11 @@
+Connecting
+https://www.calhoun.io/connecting-to-a-postgresql-database-with-gos-database-sql-package/
+
+Inserting Records
+https://www.calhoun.io/inserting-records-into-a-postgresql-database-with-gos-database-sql-package/
+
+Updating And Deleting Records
+https://www.calhoun.io/updating-and-deleting-postgresql-records-using-gos-sql-package/
+
+Selecting records 
+https://golangcode.com/postgresql-connect-and-query/
