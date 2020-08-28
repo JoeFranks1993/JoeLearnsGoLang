@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
+	// Test comment for github change
 	fmt.Println(Joe(3));
 	fmt.Println(AddNums(5, 5));
 	fmt.Println(AddNums(GetNums()));
