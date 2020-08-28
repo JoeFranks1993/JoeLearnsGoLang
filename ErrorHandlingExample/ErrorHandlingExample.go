@@ -15,7 +15,7 @@ func main() {
 	var inputAsInt, inputConversionErr = strconv.Atoi(commandLineInput)
 
 	if inputConversionErr == nil { // If the conversion from string to int failed, do nothing and print the error
-		var result, err = DoAThing(inputAsInt) // Call our custom function
+		var result, err = doAThing(inputAsInt) // Call our custom function
 		if err == nil {                        // If we did not get an error, print the result out put to the console after casting it back to a string. Otherwise print the error
 			fmt.Println("The input value plus 100 is " + strconv.Itoa(result))
 		} else {
@@ -26,7 +26,7 @@ func main() {
 	}
 }
 
-func DoAThing(inputValue int) (result int, err error) {
+func doAThing(inputValue int) (result int, err error) {
 	if inputValue < 10 {
 		err = errors.New("Values less than 10 cannot be used")
 		return

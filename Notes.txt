@@ -1,0 +1,17 @@
+** Public and Private Members **
+aka. exported or non-exported methods are denoted by either starting with a capital letter or a lower case letter.
+I.E 
+func DoAThing() {} // This will be public and can be invoked by a package importing this package.
+vs 
+func doAThing() {} // This will be private and can only be invoked locally 
+
+** Panic **
+panic(msg) // Basically a way of saying, an error happened that we cannot recover from, there is nothing that can be done. 
+This is used in the case where we cannot recover, other wise we would simply import errors and use the error interface as a return type to the caller.
+
+** defer **
+defer functionInvocation() // This acts similar to a finally {} in .net. You can use this syntax when you want to do something after the current function has completed.
+I.E this will be exectuted once you leave the scope of the function that stated it.
+A good example of this being a DB connection function. 
+Connect to the DB, make your query and defer closeDbConnection()
+
