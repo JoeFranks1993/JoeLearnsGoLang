@@ -16,7 +16,7 @@ type goUser struct {
 }
 
 const (
-	host     = "xrsdev-lin007a.xrsdev.local"
+	host     = "{YOUR DB HOSTNAME HERE}"
 	port     = 6432 // none standard port for my environment
 	user     = "postgres"
 	password = "postgres"
