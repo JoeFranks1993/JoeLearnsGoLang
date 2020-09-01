@@ -27,7 +27,7 @@ func main() {
 	// Use the const values defined above to build a connection string
 	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+"password=%s dbname=%s sslmode=disable", host, port, user, password, dbname)
 
-	// Call into the sql package to connect to the databse
+	// Call into the sql package to connect to the database
 	db, err := sql.Open("postgres", psqlInfo)
 
 	// Check if the err value was set, if so PANIC
@@ -36,13 +36,13 @@ func main() {
 		panic(err)
 	}
 
-	// Set the db.close method to be defered.
+	// Set the db.close method to be deferred.
 	// This means once the main() method completes, db.close() will be invoked
 	defer db.Close()
 
 	// Next we need to call the db.ping() method. See the below snip-it from the documentation as to why this is critical.
 
-	// "It is vitally important that you call the Ping() method becuase the sql.Open() function call does not ever create a connection to the database. Instead, it simply validates the arguments provided."
+	// "It is vitally important that you call the Ping() method because the sql.Open() function call does not ever create a connection to the database. Instead, it simply validates the arguments provided."
 	// "By calling db.Ping() we force our code to actually open up a connection to the database which will validate whether or not our connection string was 100% correct."
 	err = db.Ping() // Notice we simply reuse the error variable declared above. Denoted by the "=" instead of the ":="
 	if err != nil {
