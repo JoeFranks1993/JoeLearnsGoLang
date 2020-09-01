@@ -29,9 +29,8 @@ func main() {
 func doAThing(inputValue int) (result int, err error) {
 	if inputValue < 10 {
 		err = errors.New("Values less than 10 cannot be used")
-		return
 	} else {
 		result = inputValue + 100
-		return
 	}
+	return
 }
