@@ -16,6 +16,14 @@ func main() {
 	var cat = Cat{color: "White", weight: 100}
 	Move(cat)
 	EatDinner(cat)
+
+	////////////////////////////////////////////////////
+	var bebe = Cat{color: "Black", age: 8, weight: 7}
+	fmt.Println(bebe.age)
+	IncrementAge(&bebe.age) // Make bebe 9 by passing his age via a pointer to the increment method
+	fmt.Println(bebe.age)
+	IncrementAge(&bebe.age) // Make bebe 10 by passing his age via a pointer to the increment method
+	fmt.Println(bebe.age)
 }
 
 func Joe(input int) (result string, i int) {
@@ -79,6 +87,10 @@ func Move(a Animal) {
 
 func EatDinner(a Animal) {
 	a.Eat()
+}
+
+func IncrementAge(age *int) {
+	*age++
 }
 
 // That video you were watching
